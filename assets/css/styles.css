@@ -34,9 +34,6 @@ header .logo {
   justify-content: center;    /* Centra el logo horizontalmente */
   align-items: center;
 }
-.navbar-brand img {
-  margin: 0 auto;
-}
 
 /* === TEXTOS (spans) ALINEADOS A LA IZQUIERDA === */
 span {
@@ -64,4 +61,49 @@ body, p, h1, h2, h3, h4, h5, h6 {
 /* === Ajuste visual del header general === */
 header.bg-main {
   padding-top: 40px;
+}
+
+.card-red-border {
+  background-color: #5f6f8f;
+  color: white
+}
+
+.btn-green {
+    background-color: #3e9e55 !important; /* verde claro */
+    border: 1px solid #28a745 !important;
+    color: #ffffff;
+  }
+
+  .btn-green:hover {
+    background-color: #628a6b !important; /* verde claro */
+    border: 1px solid #28a745 !important;
+    color: #ffffff;
+  }
+
+  .btn-red {
+     background-color: #bd4141 !important; /* verde claro */
+    border: 1px solid #a72828 !important;
+    color: #ffffff;
+  }
+
+  .btn-red:hover {
+    background-color: #722c2c !important; /* verde claro */
+    border: 1px solid #a72828 !important;
+    color: #ffffff;
+  }
+  
+  a{
+    color: white !important;
+  }
+
+.cardA{
+  color: black !important;
+}
+
+.cardW{
+  color: white !important;
+}
+
+.pw{
+  color: white !important;
 }
