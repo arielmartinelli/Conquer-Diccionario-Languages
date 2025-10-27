@@ -20,8 +20,48 @@
 .eranc li{ margin-bottom:.6rem; }
 .reveal{ visibility:hidden; }
 .dialog-block p{ margin-bottom:.5rem; }
+/* === LOGO CENTRADO === */
+header .logo {
+  display: block;
+  margin: 0 auto 20px auto;   /* Centrado horizontal y separación inferior */
+  max-height: 80px;           /* Mantiene el tamaño actual, ajusta si querés */
+}
+
+/* === CENTRADO GLOBAL DEL LOGO EN TODAS LAS PÁGINAS === */
+.navbar-brand {
+  width: 100%;
+  display: flex;
+  justify-content: center;    /* Centra el logo horizontalmente */
+  align-items: center;
+}
+.navbar-brand img {
+  margin: 0 auto;
+}
+
+/* === TEXTOS (spans) ALINEADOS A LA IZQUIERDA === */
 span {
-  display: block;           /* Hace que se comporte como un bloque */
-  text-align: center;       /* Centra el texto dentro del span */
-  width: 100%;              /* Ocupa todo el ancho disponible */
+  display: block;
+  text-align: left;
+  color: #2e3b55;             /* Azul grisáceo más elegante */
+  font-weight: 500;
+}
+
+/* === COLOR DE TEXTO GENERAL (para títulos, botones, etc.) === */
+body, p, h1, h2, h3, h4, h5, h6 {
+  color: #1f2d3d;             /* Gris azulado suave */
+}
+
+/* === BOTONES MÁS ARMÓNICOS === */
+.btn-primary, .btn-hero, .btn-sub {
+  background-color: #4f8cff !important;  /* Celeste brillante */
+  border-color: #4f8cff !important;
+}
+.btn-primary:hover, .btn-hero:hover, .btn-sub:hover {
+  background-color: #3c6fd6 !important;
+  border-color: #3c6fd6 !important;
+}
+
+/* === Ajuste visual del header general === */
+header.bg-main {
+  padding-top: 40px;
 }
