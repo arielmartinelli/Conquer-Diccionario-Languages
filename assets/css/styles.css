@@ -36,12 +36,7 @@ header .logo {
 }
 
 /* === TEXTOS (spans) ALINEADOS A LA IZQUIERDA === */
-span {
-  display: block;
-  text-align: left;
-  color: #2e3b55;             /* Azul grisáceo más elegante */
-  font-weight: 500;
-}
+
 
 /* === COLOR DE TEXTO GENERAL (para títulos, botones, etc.) === */
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -106,4 +101,73 @@ header.bg-main {
 
 .pw{
   color: white !important;
+}
+
+.back-container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Círculo con flecha */
+.back {
+  width: 50px;
+  height: 50px;
+  background-color: #2e3b55;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Flecha hacia la izquierda */
+.back::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+  margin-left: 3px;
+}
+
+/* Hover dinámico */
+.back:hover {
+  background-color: #3e4c70;
+  transform: translateX(-30%) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  padding: 20px 0 !important;
+  background-color: transparent; /* mantenelo limpio */
+}
+
+@keyframes vibrar {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-3px, -3px); }
+  20% { transform: translate(3px, -3px); }
+  30% { transform: translate(-3px, 3px); }
+  40% { transform: translate(3px, 3px); }
+  50% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, -2px); }
+  70% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, 2px); }
+  90% { transform: translate(0, 0); }
+}
+
+/* 🔹 Clase que aplica la animación */
+.vibrar {
+  animation: vibrar 1s ease-in-out 3;  /* duración: 1s, repite 3 veces y luego se detiene */
 }
