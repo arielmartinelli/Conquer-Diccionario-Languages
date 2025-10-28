@@ -6,7 +6,7 @@
 }
 *{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
 .bg-main{ background: var(--bg); }
-.logo{ max-height:72px; }
+.logo{ max-height:80px; }
 .logo-sm{ max-height:40px; }
 .btn-hero{
   background: var(--primary); color:white; border-radius: 999px;
