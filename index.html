@@ -55,65 +55,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    Swal.fire({
-      title: "¿Querés la página?",
-      text: "Habilitame el bono de los 300 USD 💸",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Confirmar",
-      cancelButtonText: "No confirmar",
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      backdrop: true,
-      allowOutsideClick: false,
-      allowEscapeKey: false,
-      didOpen: () => {
-        const cancelButton = Swal.getPopup().querySelector(".swal2-cancel");
 
-        // Evitar cualquier click efectivo en el botón
-        cancelButton.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          return false;
-        });
-
-        // Movimiento exagerado: todo el viewport
-        const moverBoton = () => {
-          const maxX = window.innerWidth - 200;
-          const maxY = window.innerHeight - 100;
-          const randomX = Math.floor(Math.random() * maxX);
-          const randomY = Math.floor(Math.random() * maxY);
-          cancelButton.style.position = "fixed";
-          cancelButton.style.left = `${randomX}px`;
-          cancelButton.style.top = `${randomY}px`;
-          cancelButton.style.transition = "all 0.2s ease";
-        };
-
-        // Que se mueva cuando el mouse se acerque
-        cancelButton.addEventListener("mouseenter", moverBoton);
-        cancelButton.addEventListener("mousemove", moverBoton);
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "✅ Bono habilitado",
-          text: "Confirmá por WhatsApp el bono: el bono fue activado exitosamente 📲",
-          icon: "success",
-          confirmButtonText: "Abrir WhatsApp",
-          confirmButtonColor: "#25D366",
-        }).then(() => {
-          // Redirección directa a WhatsApp
-          window.open(
-            "https://wa.me/18665065468?text=Hola!%20Confirmo%20el%20bono%20de%20300USD%20🚀",
-            "_blank"
-          );
-        });
-      }
-    });
-  });
-</script>
 
 
 
